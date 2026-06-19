@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 export async function sendMessage(messageList) {
-  const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY
+  //const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY
 
   try {
     const response = await axios.post(
-      '/api/deepseek/chat/completions',
+      '/api/deepseek/chat',
       {
         model: 'deepseek-v4-flash', // 官方最新推荐模型
         messages: messageList,
@@ -15,7 +15,7 @@ export async function sendMessage(messageList) {
       {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${apiKey}`
+         // "Authorization": `Bearer ${apiKey}`
         }
       }
     )
