@@ -7,7 +7,7 @@ export async function sendMessage(messageList) {
     const response = await axios.post(
       '/api/deepseek/chat',
       {
-        model: 'deepseek-v4-flash', // 官方最新推荐模型
+        model: 'deepseek-chat',
         messages: messageList,
         temperature: 0.7,
         stream: false
